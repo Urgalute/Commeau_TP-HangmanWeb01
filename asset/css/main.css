@@ -1,0 +1,43 @@
+#img01 {
+    width: 30px;
+    height: 30px;
+
+}
+.listContainer {
+    
+    display: flex;
+    max-width: 25%;
+    flex-direction: column;
+    padding-left: 20px;
+    padding: 10px;
+}
+
+.listItem {
+    display: flex;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.listItemInfos p {
+margin: 10px;
+}
+
+.change {
+    display: flex;
+    background-color: black;
+    justify-content :center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.checkPair {
+    display: block;
+    background-color: white;
+    border: 5px solid black;
+    border-radius: 10px;   
+    padding: 10px;
+    margin: 10px; 
+}

@@ -1,0 +1,24 @@
+{{define "Change"}}
+<!doctype html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{.Css}}">
+    <title>Change</title>
+</head>
+<body>
+    <div class="change">
+        <div class="checkPair">
+            {{if .Check}}
+                <p>Le chiffre est paire</p>
+            {{else}}
+            <p>Le chiffre est impaire</p>
+            {{end}}
+            <div class="viewNbr">
+                <p>{{.Nbr}}</p>
+            </div>
+        </div>
+    </div>    
+</body>
+{{end}}
