@@ -4,44 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{.Css}}">
+    <link rel="stylesheet" href="static/css/main.css">
     <title>Promo</title>
 </head>
 <body>
-    <div>
-        <h1 class="InfoPromo">Informations sur la promotion</h1>
-        <p class="Promo"><strong>Nom</strong> : Mentor'ac<br><strong>Filière</strong> : Informatique<br><strong>Niveau</strong> : 5<br><strong>Nombre d'étudiants</strong> : 3</p>
-    </div>
-    <div>
-        <h1 class="List">Liste des étudiants</h1>
-        <div class="listContainer">
-            <div class="listItem">
-                <div class="listItemInfos">
-                    <p>{{.A}}</p>
-                    <p>{{.Age1}}</p>
-                </div>
-                <div>
-                    <img id="img01" src="{{.ImgSrc}}" alt="Logo sexe masculin">
-                </div>
-            </div>
-            <div class="listItem">
-                <div class="listItemInfos">
-                    <p>{{.B}}</p>
-                    <p>{{.Age2}}</p>
-                </div>
-                <div> 
-                    <img id="img01" src="{{.ImgSrc}}" alt="Logo sexe masculin">
-                </div>
-            </div>
+    <div class="Promo">
+        <div>
+            <h1 class="InfoPromo">Informations sur la promotion</h1>
+            <p class="Promo"><strong>Nom</strong> : Mentor'ac<br><strong>Filière</strong> : Informatique<br><strong>Niveau</strong> : 5<br><strong>Nombre d'étudiants</strong> : 3</p>
+        </div>
+        <div>
+            <h1 class="List">Liste des étudiants</h1>
+            <div class="listContainer">
                 <div class="listItem">
                     <div class="listItemInfos">
-                        <p>{{.C}}</p>
-                        <p>{{.Age3}}</p>
+                        <p>{{.A}}</p>
+                        <p>{{.Age1}}</p>
                     </div>
                     <div>
-                        <img id="img01" src="{{.ImgSrc}}" alt="Logo sexe masculin"><br>
+                        <img id="img01" src="{{.ImgSrc}}" alt="Logo sexe masculin">
                     </div>
                 </div>
+                <div class="listItem">
+                    <div class="listItemInfos">
+                        <p>{{.B}}</p>
+                        <p>{{.Age2}}</p>
+                    </div>
+                    <div> 
+                        <img id="img01" src="{{.ImgSrc}}" alt="Logo sexe masculin">
+                    </div>
+                </div>
+                    <div class="listItem">
+                        <div class="listItemInfos">
+                            <p>{{.C}}</p>
+                            <p>{{.Age3}}</p>
+                        </div>
+                        <div>
+                            <img id="img01" src="{{.ImgSrc}}" alt="Logo sexe masculin"><br>
+                        </div>
+                    </div>
+            </div>
         </div>
     </div>
 </body>

@@ -1,7 +1,17 @@
+body{
+    background-color: black;
+}
+.Promo {
+    background-color: white;
+}
 #img01 {
     width: 30px;
     height: 30px;
 
+}
+
+.List {
+    background-color: white;
 }
 .listContainer {
     
@@ -33,6 +43,7 @@ margin: 10px;
     padding-top: 100px;
     padding-bottom: 100px;
 }
+
 .checkPair {
     display: block;
     background-color: white;
@@ -40,4 +51,37 @@ margin: 10px;
     border-radius: 10px;   
     padding: 10px;
     margin: 10px; 
+}
+
+.userinfos {
+    background-color: white;
+    border: 5px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 20%
+}
+
+.champ {
+    margin: 5px;
+    padding: 5px;
+}
+
+.Init {
+    background-color: white;
+    margin: 20%;
+    padding: 20px;
+}
+
+.info {
+    background-color: white;
+    border: 5px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin-top: 10%;margin-left: 20%; margin-right: 20%;
 }

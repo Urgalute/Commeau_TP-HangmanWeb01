@@ -6,6 +6,15 @@ import (
 	"net/http"
 )
 
+type detail struct {
+	Nom    string
+	Prenom string
+	Birth  string
+	Sexe   string
+}
+
+var myuser detail
+
 func main() {
 
 	temp, err := template.ParseGlob("./Templates/*.html")
@@ -21,24 +30,22 @@ func main() {
 		Age2   string
 		Age3   string
 		ImgSrc string
-		Css string
 	}
 
-	dataPage := Etudiant{"Cyril RODRIGUES", "Kheir-eddine MEDERREG", "Alan PHILIPIERT",
-		"22", "22", "26",
-		"static/img/OIP.jpg", "static/css/main.css"}
 	http.HandleFunc("/Promo", func(w http.ResponseWriter, r *http.Request) {
+		dataPage := Etudiant{"Cyril RODRIGUES", "Kheir-eddine MEDERREG", "Alan PHILIPIERT",
+			"22", "22", "26",
+			"static/img/OIP.jpg"}
 		temp.ExecuteTemplate(w, "Promo", dataPage)
 	})
 
 	type CheckView struct {
 		Check bool
 		Nbr   int
-		Css string
 	}
 
-	even := false
-	view := 0
+	var even bool
+	var view int
 	http.HandleFunc("/Change", func(w http.ResponseWriter, r *http.Request) {
 		view++
 		if view%2 == 0 {
@@ -46,8 +53,22 @@ func main() {
 		} else {
 			even = false
 		}
-		dataPage := CheckView{even, view, "static/css/main.css"}
+		dataPage := CheckView{even, view}
 		temp.ExecuteTemplate(w, "Change", dataPage)
+	})
+
+	http.HandleFunc("/Init", func(w http.ResponseWriter, r *http.Request) {
+		temp.ExecuteTemplate(w, "Init", nil)
+	})
+
+	http.HandleFunc("/Display", func(w http.ResponseWriter, r *http.Request) {
+		user := detail{
+			Nom:    r.FormValue("nom"),
+			Prenom: r.FormValue("prenom"),
+			Birth:  r.FormValue("birthday"),
+			Sexe:   r.FormValue("sexe"),
+		}
+		temp.ExecuteTemplate(w, "Display", user)
 	})
 
 	fileServer := http.FileServer(http.Dir("asset"))
